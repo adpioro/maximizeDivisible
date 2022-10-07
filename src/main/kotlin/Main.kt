@@ -1,7 +1,7 @@
 var steps = 6
 
 fun main() {
-    val userInput = readln() //"[784, 4765, 5291]"
+    val userInput = readln()
         .substringAfter('[')
         .substringBefore(']')
         .split(", ")
@@ -23,6 +23,7 @@ fun main() {
     repeat(maximizationTimes) {
         val maximized = maximizeSum(numsList)
         numsList = maximized
+        steps -= 3
     }
     println(numsList)
 }
